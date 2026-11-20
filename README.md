@@ -19,3 +19,8 @@ Open `http://localhost:4173`.
 4. Redeploy the site.
 
 The trip planner still works without a key using a built-in demo itinerary.
+
+## Destination catalog
+
+The Explore page includes 305 major Indian destination entries across Forest,
+Mountain, Waterfall, Beach, Flower, and Lake categories.

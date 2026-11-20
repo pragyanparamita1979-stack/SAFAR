@@ -28,6 +28,12 @@
         <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search place, state or experience"></label>
         <button class="search-button" type="button" onclick="showPlaces()">Search</button>
       </div>
+      <div class="state-filter-row">
+        <label for="stateFilter">Browse by state or union territory</label>
+        <select id="stateFilter" onchange="filterByState(this.value)">
+          <option value="All">All states and union territories</option>
+        </select>
+      </div>
     </section>
     <div class="filters">
       <button class="active" type="button" onclick="filterPlaces('All')">All places</button>
