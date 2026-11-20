@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Trip Planner — SafarAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav-wrap inner-nav">
+    <nav class="nav-shell">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span>SAFAR<span class="brand-ai">AI</span></a>
+      <button class="menu-button" type="button" aria-expanded="false">Menu</button>
+      <div class="nav-links"><a href="index.html">Home</a><a href="explore.html">Explore</a><a class="active" href="planner.html">AI Planner</a></div>
+      <a class="nav-cta" href="#planner">Plan a journey <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main class="planner-main" id="planner">
+    <section class="planner-heading">
+      <p class="eyebrow dark"><span></span> SafarAI trip companion</p>
+      <h1>Shape a journey that<br><em>feels like you.</em></h1>
+      <p>Choose a destination and tell us your pace. Our AI creates a practical, personalised starting point.</p>
+    </section>
+    <section class="planner-layout">
+      <form class="planner-form" id="plannerForm">
+        <div class="field-row">
+          <label>Destination<select id="planPlace"></select></label>
+          <label>Duration<select id="days"><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="7">7 days</option></select></label>
+        </div>
+        <div class="field-row">
+          <label>Travel style<select id="travelStyle"><option>Relaxed</option><option>Balanced</option><option>Adventure</option><option>Luxury</option></select></label>
+          <label>Budget<select id="budget"><option>Budget friendly</option><option>Comfortable</option><option>Premium</option></select></label>
+        </div>
+        <label>What are you drawn to?
+          <div class="interest-options">
+            <label><input type="checkbox" name="interest" value="Nature" checked><span>Nature</span></label>
+            <label><input type="checkbox" name="interest" value="Food"><span>Food</span></label>
+            <label><input type="checkbox" name="interest" value="Culture"><span>Culture</span></label>
+            <label><input type="checkbox" name="interest" value="Photography"><span>Photography</span></label>
+          </div>
+        </label>
+        <label>Anything else?<textarea id="preferences" rows="3" placeholder="Example: Prefer slow mornings, vegetarian food and easy walks"></textarea></label>
+        <button class="button button-green planner-submit" type="submit"><span id="submitText">Create my itinerary</span><b>→</b></button>
+      </form>
+      <aside class="plan-output" id="planResult" aria-live="polite">
+        <div class="empty-plan"><div class="orbit"><span>AI</span></div><h2>Your journey begins here</h2><p>Add a few details and let SafarAI compose a thoughtful first draft.</p></div>
+      </aside>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">S</span>SAFAR<span class="brand-ai">AI</span></a><p>India, thoughtfully discovered.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
